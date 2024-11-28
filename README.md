@@ -7,7 +7,6 @@ A rules engine for calculating BC Winter Supplement benefits.
 
 - [Assignment Goal](#assignment-overview)
 - [Installation](#installation)
-- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Testing](#testing)
 
@@ -15,7 +14,7 @@ A rules engine for calculating BC Winter Supplement benefits.
 
 The goal of this assignment is to implement a business rules engine that determines eligibility and calculates the benefits a client is eligible to receive.
 
-## Environment Setup
+## Installation
 
 Prerequisites:
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
