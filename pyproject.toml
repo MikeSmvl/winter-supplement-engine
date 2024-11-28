@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "winter-supplement-engine"
+version = "0.1.0"
+description = "A rules engine for calculating BC Winter Supplement benefits."
+authors = ["Mike Samvelian <mikael.samvelian@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+paho-mqtt = "^2.1.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+start = "winter_supplement_engine.engine:start"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
