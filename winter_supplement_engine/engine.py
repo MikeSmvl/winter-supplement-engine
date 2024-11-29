@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+from paho.mqtt.enums import CallbackAPIVersion
 from dotenv import load_dotenv
 from winter_supplement_engine.config import get_env_variable
 from winter_supplement_engine.rules import process_supplement_request
@@ -21,7 +22,7 @@ except ValueError as e:
 class WinterSupplementEngine:
     def __init__(self):
         # initialize client and topics
-        self.client = mqtt.Client()
+        self.client = mqtt.Client(protocol=mqtt.MQTTv5, callback_api_version=CallbackAPIVersion.VERSION2)
 
         self.use_specific_topic = MQTT_TOPIC_ID is not None
         if self.use_specific_topic:
