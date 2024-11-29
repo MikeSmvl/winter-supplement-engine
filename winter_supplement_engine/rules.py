@@ -35,7 +35,7 @@ def validate_input(data: dict) -> Optional[WinterSupplementInput]:
             raise ValueError("numberOfChildren must be a non-negative integer")
 
         # validate familyComposition
-        if data['familyComposition'] not in ["single", "couple"]:
+        if data['familyComposition'].lower() not in ["single", "couple"]:
             raise ValueError("familyComposition must be either 'single' or 'couple'")
 
         # validate familyUnitInPayForDecember

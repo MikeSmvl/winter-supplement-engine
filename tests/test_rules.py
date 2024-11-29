@@ -19,6 +19,18 @@ def test_validate_input_valid_case():
     }
     assert validate_input(valid_input) is not None
 
+def test_validate_input_valid_case_family_insensitive():
+    """
+    Test that validate isn't case sensitive for familyComposition
+    """
+    valid_input = {
+        "id": "test123",
+        "numberOfChildren": 2,
+        "familyComposition": "Single", # Uppercase "S"
+        "familyUnitInPayForDecember": True
+    }
+    assert validate_input(valid_input) is not None
+
 def test_validate_input_missing_field():
     """
     Test that validate returns None when input field is missing
