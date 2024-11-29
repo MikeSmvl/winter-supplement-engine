@@ -30,7 +30,7 @@ class WinterSupplementEngine:
         self.client.on_message = self.on_message
         self.client.on_disconnect = self.on_disconnect
 
-    def on_connect(self, client, userdata, flags, rc):
+    def on_connect(self, client, userdata, flags, rc, properties=None):
         if rc == 0:
             print(f"Connected to MQTT broker: {self.mqtt_broker}:{self.mqtt_broker_port}")
             # subscribe to the input topic
