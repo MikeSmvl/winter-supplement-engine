@@ -31,8 +31,9 @@ def validate_input(data: dict) -> Optional[WinterSupplementInput]:
             raise ValueError("id must be a string")
 
         # validate numberOfChildren
-        if not isinstance(data['numberOfChildren'], int) or data['numberOfChildren'] < 0:
-            raise ValueError("numberOfChildren must be a non-negative integer")
+        MAX_CHILDREN = 30  # reasonable maximum to protect against potential misuse
+        if not isinstance(data['numberOfChildren'], int) or data['numberOfChildren'] < 0 or data['numberOfChildren'] > MAX_CHILDREN:
+            raise ValueError(f"numberOfChildren must be a non-negative integer not exceeding {MAX_CHILDREN}")
 
         # validate familyComposition
         if data['familyComposition'].lower() not in ["single", "couple"]:

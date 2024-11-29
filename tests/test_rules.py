@@ -54,6 +54,18 @@ def test_validate_input_invalid_number_of_children():
     }
     assert validate_input(invalid_input) is None
 
+def test_validate_input_exceeds_maximum_children():
+    """
+    Test that validate returns None when number of children exceeds maximum limit
+    """
+    invalid_input = {
+        "id": "test123",
+        "numberOfChildren": 31,  # Exceeds maximum of 30 children
+        "familyComposition": "single",
+        "familyUnitInPayForDecember": True
+    }
+    assert validate_input(invalid_input) is None
+
 def test_validate_input_invalid_family_composition():
     """
     Test that validate returns None when family composition is not "single" or "couple"
