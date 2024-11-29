@@ -28,7 +28,9 @@ $ poetry install
 $ cp .env.example .env
 ```
 
-1. Update the MQTT_TOPIC_ID in your `.env` file with the Topic ID displayed in the Winter Supplement Calculator interface. It should look something like:
+By default, the engine will run in wildcard subscription mode, processing **all requests** on `BRE/calculateWinterSupplementInput`. If you want to process requests for a specific MQTT topic ID:
+
+Add the MQTT_TOPIC_ID in your .env file with the `MQTT Topic ID` displayed in the Winter Supplement Calculator. It should look something like:
 
 ```
 MQTT_TOPIC_ID="8c882c0e-b4c3-41b4-9d71-a58e2df2f5cb"
