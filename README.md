@@ -20,6 +20,15 @@ A rules engine for calculating BC Winter Supplement benefits.
 
 The goal of this assignment is to implement a business rules engine that determines eligibility and calculates the benefits a client is eligible to receive.
 
+## Assumptions & Constraints
+The engine implements the following validation rules and constraints:
+
+- Family composition has to be "single" or "couple" (case insensitive)
+- Number of children has to be a non-negative integer not exceeding 30
+  - I chose this upper limit to accommodate for most cases while making sure the system can't be misused
+  - I assume cases exceeding this limit would likely require manual review
+- Eligibility is determined by the `familyUnitInPayForDecember` status
+
 ## Installation
 
 Prerequisites:
