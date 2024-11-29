@@ -15,6 +15,7 @@ A rules engine for calculating BC Winter Supplement benefits.
 - [Testing](#testing)
   - [Testing with Docker](#testing-with-docker)
   - [Testing with Poetry](#testing-with-poetry)
+- [Demo](#demo)
 
 ## Overview
 
@@ -72,9 +73,9 @@ poetry install
 The engine processes requests by default in wildcard subscription mode, handling **all requests** on the `BRE/calculateWinterSupplementInput` topic.
 
 ### Custom Configuration
-To process requests for a specific MQTT topic, update your `.env` file with the `MQTT_TOPIC_ID` given by the Winter Supplement Calculator:
+To process requests for a specific MQTT topic ID, update your `.env` file with the `MQTT_TOPIC_ID` given by the Winter Supplement Calculator:
 ```plaintext
-MQTT_TOPIC_ID="8c882c0e-b4c3-41b4-9d71-a58e2df2f5cb"
+MQTT_TOPIC_ID=8c882c0e-b4c3-41b4-9d71-a58e2df2f5cb
 ```
 
 ### Running with Docker
@@ -102,3 +103,6 @@ To run the unit tests with Poetry use:
 ```bash
 poetry run pytest
 ```
+
+## Demo
+![winter-supplement-engine](https://github.com/user-attachments/assets/99e773aa-6b3a-416e-8319-5ccae7f5b726)
