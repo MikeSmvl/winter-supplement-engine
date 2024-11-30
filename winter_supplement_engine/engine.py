@@ -39,7 +39,7 @@ class WinterSupplementEngine:
         else:
             print(f"Failed to connect to MQTT broker with result code: {rc}")
 
-    def on_disconnect(self, client, userdata, rc):
+    def on_disconnect(self, client, userdata, disconnect_flags, rc, properties):
         if rc != 0:
             # print reason code for the disconnection
             print(f"Disconnected from MQTT broker: {rc}")
